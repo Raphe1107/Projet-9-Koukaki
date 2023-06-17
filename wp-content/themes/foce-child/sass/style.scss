@@ -9,7 +9,50 @@
  */
 
 
- .story__article::after, .story h2::after, #studio h2::before, #studio h2::after,.site-footer::before, .site-footer::after, .site-footer ul::after {
-    background-color: red;
-    
- }
+// Rotation fleurs 
+
+@keyframes rotate {
+   0% {
+     transform: rotate(0deg);
+   }
+   100% {
+     transform: rotate(360deg);
+   }
+}
+
+.story__article::after, 
+.story h2::after, 
+#studio h2::before, 
+#studio h2::after,
+.site-footer::before, 
+.site-footer::after, 
+.site-footer ul::after {
+   animation: rotate 20s linear infinite;
+}
+
+// Section nomination 
+#nomination {
+   display: flex;
+   position: relative;
+   margin-top: 50px;
+
+   h2 {
+   color: #FFF5E9;
+   font-size: 46px;
+   background-image: url(./img/fondorange.png);
+   padding: 60px 65px;
+   margin: 0;
+   text-align: left;
+   }
+  
+  
+}
+
+.nomination-title {
+   width: 60%;
+}
+
+.nomination-img {
+   width: 30%;
+   margin-top: 50px;
+}

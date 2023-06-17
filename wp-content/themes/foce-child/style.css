@@ -8,6 +8,43 @@
  Description: Thème enfant à l'ocasion de la nomination aux Oscars Shorts
  Version: 0.1
  */
-.story__article::after, .story h2::after, #studio h2::before, #studio h2::after, .site-footer::before, .site-footer::after, .site-footer ul::after {
-  background-color: red;
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.story__article::after,
+.story h2::after,
+#studio h2::before,
+#studio h2::after,
+.site-footer::before,
+.site-footer::after,
+.site-footer ul::after {
+  animation: rotate 20s linear infinite;
+}
+
+#nomination {
+  display: flex;
+  position: relative;
+  margin-top: 50px;
+}
+#nomination h2 {
+  color: #FFF5E9;
+  font-size: 46px;
+  background-image: url(./img/fondorange.png);
+  padding: 60px 65px;
+  margin: 0;
+  text-align: left;
+}
+
+.nomination-title {
+  width: 60%;
+}
+
+.nomination-img {
+  width: 30%;
+  margin-top: 50px;
 }/*# sourceMappingURL=style.css.map */
