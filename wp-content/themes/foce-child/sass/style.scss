@@ -12,11 +12,8 @@
 // Rotation fleurs 
 
 @keyframes rotate {
-   0% {
-     transform: rotate(0deg);
-   }
    100% {
-     transform: rotate(360deg);
+      transform: rotate(1turn);
    }
 }
 
@@ -29,6 +26,27 @@
 .site-footer ul::after {
    animation: rotate 20s linear infinite;
 }
+
+.story h2::after {
+   transform-origin: 76px 76px;
+}
+
+// Fade in
+
+@keyframes fade-in {
+   from {
+      opacity: 0;
+   }
+   to {
+      opacity: 1;
+   }
+}
+
+section {
+   animation: fade-in 4s;
+}
+
+
 
 // Section nomination 
 #nomination {

@@ -9,11 +9,8 @@
  Version: 0.1
  */
 @keyframes rotate {
-  0% {
-    transform: rotate(0deg);
-  }
   100% {
-    transform: rotate(360deg);
+    transform: rotate(1turn);
   }
 }
 .story__article::after,
@@ -26,6 +23,22 @@
   animation: rotate 20s linear infinite;
 }
 
+.story h2::after {
+  transform-origin: 76px 76px;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+section {
+  animation: fade-in 4s;
+}
+
 #nomination {
   display: flex;
   position: relative;
@@ -34,7 +47,7 @@
 #nomination h2 {
   color: #FFF5E9;
   font-size: 46px;
-  background-image: url(./img/fondorange.png);
+  background-image: url(./assets/fondorange.png);
   padding: 60px 65px;
   margin: 0;
   text-align: left;
