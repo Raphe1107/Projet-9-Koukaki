@@ -60,4 +60,65 @@ section {
 .nomination-img {
   width: 30%;
   margin-top: 50px;
+}
+
+.site-footer ul {
+  margin-top: 25%;
+}
+
+.bannner {
+  min-height: 806px;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation-name: fade-in;
+  animation-duration: 1.5s;
+  position: relative;
+}
+.bannner img {
+  margin-top: -10%;
+  width: 50%;
+  animation: flottement 2s ease-in-out infinite;
+}
+.bannner video {
+  animation-duration: 1.5s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: -100;
+  position: absolute;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+@keyframes flottement {
+  0% {
+    transform: translate(0, 0);
+  }
+  30% {
+    transform: translate(0, -10%);
+  }
+  60% {
+    transform: translate(0, 5%);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+.swiper {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 300px;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
 }/*# sourceMappingURL=style.css.map */

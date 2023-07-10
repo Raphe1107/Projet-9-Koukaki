@@ -4,8 +4,9 @@ get_header();
 ?>
 
     <main id="primary" class="site-main">
-        <section class="banner">
+        <section class="bannner">
             <img src="<?php echo get_template_directory_uri() . '/assets/images/logo.png'; ?> " alt="logo Fleurs d'oranger & chats errants">
+            <video autoplay="autoplay" muted="" loop="infinite" src="wp-content\themes\foce-child\assets\video.mp4"> </video>
         </section>
         <section id="#story" class="story">
             <h2>L'histoire</h2>
@@ -22,32 +23,16 @@ get_header();
             );
             $characters_query = new WP_Query($args);
             ?>
+            
+
             <article id="characters">
                 <div class="main-character">
-                    <h3>Les personnages</h3>
-                    <?php
-                    $main_character = $characters_query->posts[0];
-                    echo '<figure>';
-                    echo get_the_post_thumbnail( $main_character->ID, 'full' );
-                    echo '<figcaption>'. $main_character->post_title . '</figcaption>';
-                    echo '</figure>';
-                    $characters_query->next_post();
-                    ?>
-                </div>
-                <div class="other-characters">
-                    <?php
-                    while ( $characters_query->have_posts() ) {
-                        $characters_query->the_post();
-                        echo '<figure>';
-                        echo get_the_post_thumbnail( get_the_ID(), 'full' );
-                        echo '<figcaption>';
-                        the_title();
-                        echo'</figcaption>';
-                        echo '</figure>';
-                    }
-                    ?>
-                </div>
+                    <h3 class="reveal " >Les personnages</h3>  
+                    <?php get_template_part( 'templates/characters'); ?>
+            </div>
             </article>
+                    
+            
             <article id="place">
                 <div>
                     <h3>Le Lieu</h3>
@@ -65,7 +50,7 @@ get_header();
                 <p>Avec une créativité et une capacité d’innovation mondialement reconnues, une expertise éditoriale et commerciale à la pointe de son industrie, le Studio Koukaki se positionne comme un acteur incontournable dans un marché en forte croissance. Koukaki construit chaque année de véritables succès et capitalise sur de puissantes marques historiques. Cette année, il vous présente “Fleurs d’oranger et chats errants”.</p>
             </div>
         </section>
-            <?php get_template_part( 'nominations', get_post_format() ); ?>
+            <?php get_template_part( 'templates/nominations' ); ?>
     </main><!-- #main -->
 
 <?php
