@@ -9,11 +9,14 @@
  */
 
 
-// Rotation fleurs 
+/* ---------- Rotation des fleurs ---------- */
 
 @keyframes rotate {
-   100% {
-      transform: rotate(1turn);
+   from {
+      transform: rotate(0deg);
+   }
+   to {
+      transform: rotate(360deg);
    }
 }
 
@@ -27,61 +30,85 @@
    animation: rotate 20s linear infinite;
 }
 
+
+/* ---------- On modifie l'origine de la fleur blanche dans la section histoire ---------- */
+
 .story h2::after {
    transform-origin: 76px 76px;
 }
 
-// Fade in
+/* ---------- On change l'emplacement de la fleur violette dans le footer ---------- */
+
+.site-footer::after {
+   top: 0;
+   bottom: auto !important;
+}
+
+/* ---------- Animation Fade-in pour les sections ---------- */
+
 
 @keyframes fade-in {
    from {
       opacity: 0;
+      transform: translateY(150px);
    }
    to {
       opacity: 1;
+      transform: translateY(0);
    }
 }
 
 section {
-   animation: fade-in 4s ;
+   
+   animation: fade-in 2s ease-in-out;
 }
 
 
+/* ---------- Titre ---------- */
 
-// Section nomination 
-#nomination {
-   display: flex;
+
+
+.section-title {
+   opacity: 0;
+   transform: translateY(20px);
+   transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.section-title.appear {
+   opacity: 1;
+   transform: translateY(0);
+}
+
+
+/* ---------- Section nomination ---------- */
+
+.nominations{
+	display: flex;
+   justify-content: center;
+   width: 100%;
+   min-height: 275px;
+   margin-top: 10%;
+   margin-bottom: -25%;
    position: relative;
-   margin-top: 50px;
+   z-index: -1;
+}
 
-   h2 {
-   color: #FFF5E9;
-   font-size: 46px;
-   background-image: url(./assets/fondorange.png);
-   padding: 60px 65px;
-   margin: 0;
+.nominations h3{
+	background-image: url("./assets/fondorange.png");
+   font-size: 2.5rem;
    text-align: left;
-   }
-  
-  
+   margin-bottom: 10px;
 }
 
-.nomination-title {
-   width: 60%;
-}
-
-.nomination-img {
-   width: 30%;
-   margin-top: 50px;
+.nominations img{
+	object-fit: contain;
 }
 
 .site-footer ul {
    margin-top: 25%;
 }
 
-
-
-// Vidéo bannière
+/* ---------- Vidéo bannière ---------- */
 
 
 .bannner {
@@ -113,7 +140,7 @@ section {
  }
 }
 
-// Titre bannière animation
+/* ---------- Titre bannière animation ---------- */
 
 @keyframes flottement {
    0% {
@@ -134,7 +161,7 @@ section {
 }
 
 
-// Carroussel 
+/* ---------- Carroussel ---------- */
 
 .swiper {
 	width: 100%;
@@ -146,10 +173,99 @@ section {
 	background-position: center;
 	background-size: cover;
 	width: 300px;
-	
+	 
 }
 
   .swiper-slide img {
 	display: block;
 	width: 100%;
 }
+
+/* ---------- Nuage ---------- */
+
+.story #place{
+	background-image: url("./assets/background_place.png");
+}
+
+
+.big_cloud,
+.little_cloud {
+   position: absolute;
+   filter: blur(20px);
+   transition: transform 3s ease-in-out; 
+   
+}
+
+.big_cloud{
+   left: 1020px;
+   top: 1350px;
+}
+
+
+.little_cloud{
+   left: 850px;
+	top: 1540px;
+}
+
+
+.big_cloud.active {
+   transform: translateX(-300px);
+}
+
+.little_cloud.active {
+   transform: translateX(-300px);
+}
+
+
+/* ---------- Menu burger ---------- */
+
+.menu_base li:not(:nth-child(3)) {
+   display: none;
+ }
+
+.main-navigation .line {
+   height: 3px;
+   background-color: #000;
+   display: block;
+   margin-block: 2px;
+   width: 20px;
+}
+ 
+.burger_button {
+   position: absolute;
+   cursor: pointer;
+   left: 95%;
+   top: 40%;
+}
+
+/* Styles pour le menu ouvert */
+.openedMenu {
+   position: fixed;
+   width: 100%;
+   height: 100%;
+   
+   background-color: black; /* Couleur de fond du menu */
+   z-index: 9999; /* Assure que le menu s'affiche au-dessus du reste du contenu */
+   opacity: 0;
+   visibility: hidden;
+   transition: opacity 0.3s ease, visibility 0s linear 0.3s;
+}
+
+.openedMenu.show {
+   opacity: 1;
+   visibility: visible;
+   transition-delay: 0s;
+}
+
+
+
+
+
+
+
+
+
+
+
+ 
+ 

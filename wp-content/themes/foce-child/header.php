@@ -26,12 +26,8 @@
 
 	<header id="masthead" class="site-header">
 		<nav id="site-navigation" class="main-navigation">
-            <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
-                <span class="line"></span>
-                <span class="line"></span>
-                <span class="line"></span>
-            </button>
-            <ul>
+            
+            <ul class=menu_base>
                 <li><a href="#story">Histoire</a></li>
                 <li><a href="#characters">Personnages</a></li>
                 <li class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></li>
@@ -39,6 +35,50 @@
                 <li><a href="#studio">Studio Koukaki</a></li>
                 
             </ul>
+
+            <div class="burger_button">
+                <div class="lines">
+                    <span class="line"></span>
+                    <span class="line"></span>
+                    <span class="line"></span>
+                </div>
+            </div>
+
+
+            <div class="openedMenu">
+                
+                    <div class="images_menu">
+                        <img class="orchid_burger" src="<?php echo get_stylesheet_directory_uri() . '/assets/burger/orchid_burger.png'; ?> " alt="image d'une orchidé violette" >
+                        <img class="kawaneko_burger" src="<?php echo get_stylesheet_directory_uri() . '/assets/burger/kawaneko_burger.png'; ?> " alt="image d'un chat bleu" >
+                        <img class="sunflower_burger" src="<?php echo get_stylesheet_directory_uri() . '/assets/burger/sunflower_burger.png'; ?> " alt="image d'une marguerite" >
+                        <img class="random_flower_burger" src="<?php echo get_stylesheet_directory_uri() . '/assets/burger/random_flower_burger.png'; ?> " alt="image d'une fleur" >
+                        <img class="flower_burger" src="<?php echo get_stylesheet_directory_uri() . '/assets/burger/flower_burger.png'; ?> " alt="image d'une fleur orange" >
+                        <img class="jaakuna_burger" src="<?php echo get_stylesheet_directory_uri() . '/assets/burger/jaakuna_burger.png'; ?> " alt="image d'un chat gris" >
+                        <img class="onejiiro_burger" src="<?php echo get_stylesheet_directory_uri() . '/assets/burger/onejiiro_burger.png'; ?> " alt="image d'un chat roux" >
+                        <img class="hibiscus_burger" src="<?php echo get_stylesheet_directory_uri() . '/assets/burger/hibiscus_burger.png'; ?> " alt="image d'une fleur hibiscus" >
+                        <img class="logo_burger" src="<?php echo get_stylesheet_directory_uri() . '/assets/burger/studio_koukaki_burger.png'; ?> " alt="logo Studio Koukaki">
+                    </div>
+            
+                <div class="menu-img">
+                    <img src="<?php echo get_stylesheet_directory_uri() . '/assets/burger/logo_burger.png'; ?> " alt="logo Fleurs d'oranger & chats errants">
+                </div>
+                <div>
+                    <ul class="burger_list">
+                        <li><a href="#story">Histoire</a></li>
+                        <li><a href="#characters">Personnages</a></li>
+                        <li><a href="#place">Lieu</a></li>
+                        <li><a href="#studio">Studio Koukaki</a></li>
+                    </ul>
+                </div>
+                <div class="footer-link">
+                    <ul class="burger-menu-footer-link">
+                        <li><a href="#colophon">STUDIO KOUKAKI</a></li>
+                    </ul>
+                </div>
+            </div>
+           
+
+
 
 		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->
