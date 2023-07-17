@@ -56,13 +56,36 @@ window.addEventListener('scroll', () => {
 
 /* ---------- Menu burger ---------- */
 
+const button = document.querySelector('.burger_button');
+const nav = document.querySelector('.burger_nav');
+const drop = document.querySelector('.drop');
+const main = document.querySelector('.site-main');
+const footer = document.querySelector('footer');
+const phpfooter = document.querySelector('.phpfooter');
 
-const burgerButton = document.querySelector('.burger_button');
-const openedMenu = document.querySelector('.openedMenu');
-
-burgerButton.addEventListener('click', function() {
-    openedMenu.classList.toggle('show');
+button.addEventListener('click', () => {
+  nav.classList.toggle('open');
+  main.classList.toggle('remove');
+  footer.classList.toggle('remove');
+  phpfooter.classList.toggle('remove');
 });
+
+drop.addEventListener('click', () => {
+  nav.classList.remove('open');
+  main.classList.remove('remove');
+  footer.classList.remove('remove');
+  phpfooter.classList.remove('remove');
+});
+
+/* ---------- Boutton burger ---------- */
+
+button.addEventListener('click', ()=> {
+  button.classList.toggle('active');
+});
+
+
+
+
 
 
 
