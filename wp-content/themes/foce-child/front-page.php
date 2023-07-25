@@ -5,7 +5,7 @@ get_header();
 
     <main id="primary" class="site-main">
         <section class="bannner">
-            <img src="<?php echo get_template_directory_uri() . '/assets/images/logo.png'; ?> " alt="logo Fleurs d'oranger & chats errants">
+            <img src="<?php echo get_template_directory_uri() . '/assets/images/logo.png'; ?> " alt="logo Fleurs d'oranger & chats errants" class="logo">
             <video autoplay="autoplay" muted="" loop="infinite" poster="<?php echo get_template_directory_uri() . '/assets/images/logo.png'; ?>" alt="logo Fleurs d'oranger & chats errants"
             src="wp-content\themes\foce-child\assets\video.mp4" type="video/mp4"> </video>
         </section>
