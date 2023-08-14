@@ -10,7 +10,6 @@
 
 /* ---------- Animation au chargement de la page ---------- */
 
-
 @keyframes up {
    0% {
        transform: translateY(-100px);
@@ -59,6 +58,11 @@ h2 ::after ::before {
    animation-duration: 1.5s;
 }
 
+#story {
+   transition: top 0.4s ease-out;
+   
+}
+
 
 
 
@@ -95,6 +99,12 @@ h2 ::after ::before {
 .site-footer::after {
    top: 0;
    bottom: auto !important;
+}
+
+/* ---------- On ajoute un background pour story ---------- */
+
+.story {
+   background-color: #fff5e9 !important;
 }
 
 /* ---------- Animation Fade-in pour les sections ---------- */
@@ -170,7 +180,7 @@ section {
    display: flex;
    justify-content: center;
    align-items: center;
-   animation-name: fade-in, up;
+   animation-name: fade-in, up,;
    animation-duration: 1.5s;
    position: relative;
    
@@ -587,6 +597,7 @@ button.burger_button {
    font-size: 40px;
 }
 
+
 .story__article {
    font-size: 15px;
 }
@@ -628,6 +639,7 @@ h2::after, h2::before {
 }
 
 }
+
 
 
 

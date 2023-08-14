@@ -88,6 +88,40 @@ button.addEventListener('click', ()=> {
 
 
 
+const banner = document.querySelector('.bannner');
+const story = document.querySelector('.story');
+
+window.addEventListener('scroll', () => {
+  const scrollPosition = window.scrollY;
+  const parallaxValue = scrollPosition * 0.5; 
+
+  banner.style.transform = `translateY(${parallaxValue}px)`;
+  banner.style.opacity = 1 - scrollPosition / window.innerHeight; 
+
+  story.style.transform = `translateY(-${parallaxValue}px)`;
+    
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
