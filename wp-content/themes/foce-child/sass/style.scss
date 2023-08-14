@@ -101,11 +101,7 @@ h2 ::after ::before {
    bottom: auto !important;
 }
 
-/* ---------- On ajoute un background pour story ---------- */
 
-.story {
-   background-color: #fff5e9 !important;
-}
 
 /* ---------- Animation Fade-in pour les sections ---------- */
 
@@ -258,6 +254,11 @@ section {
 
 .story #place{
 	background-image: url("./assets/background_place.png");
+}
+
+.story {
+   background-color: #fff5e9 !important;
+   z-index: 2 !important;
 }
 
 

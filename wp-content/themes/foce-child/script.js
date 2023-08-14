@@ -96,10 +96,6 @@ window.addEventListener('scroll', () => {
   const parallaxValue = scrollPosition * 0.5; 
 
   banner.style.transform = `translateY(${parallaxValue}px)`;
-  banner.style.opacity = 1 - scrollPosition / window.innerHeight; 
-
-  story.style.transform = `translateY(-${parallaxValue}px)`;
-    
 });
 
 
